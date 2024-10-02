@@ -1,0 +1,50 @@
+quantize:
+  weight_bit: 8
+  input_bit: 32
+  v_pi: 4.36
+  v_max: 10.8
+
+noise:
+  phase_noise_std: 0
+  phase_bias: 1
+  gamma_noise_std: 0.002
+  crosstalk_factor: 0.005
+  random_state: 42
+
+ic: # identity calibration
+  alg: zcd # [zgd, ztp, zcd]
+  adaptive: 1
+  best_record: 1
+
+sl: # subspace learning
+  noisy_identity: 0
+
+model:
+  # mode: "usv"
+  mode: "phase"
+  act_thres: 2.0
+
+##### MLNCP Workshop #####
+# model:
+#   mode: "usv"
+#   act_thres: 2.0
+  
+#   # hidden_list: [1024]
+#   block_list: [8,8]
+#   set_shape: True
+
+#   in_shape: [[1,1,3,7],[8,4,8,4]]
+#   # in_shape: [[4,8,4,8],[8,4,8,4]]
+#   hidden_shape: [[4,8,4,8],[8,4,8,4]]
+#   max_rank_list: [1,2,1,2,1]
+#   # max_rank_list: [1,2,2,2,1]
+
+#   # hidden_list: [768]
+#   # in_shape: [3,1,1,1,7]
+#   # hidden_shape: [3,4,4,4,4]
+#   # max_rank_list: [2,2]
+#   # in_shape: [1,3,7,1]
+#   # hidden_shape: [8,3,4,8]
+#   # max_rank_list: [4,4]
+#   # out_shape: [1,5,2,1]
+  
