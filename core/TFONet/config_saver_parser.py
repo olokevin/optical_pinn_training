@@ -10,8 +10,6 @@ from torch.utils.tensorboard import SummaryWriter
 from pyutils.config import configs as yml_config
 from core.TFONet import train
 from core.TFONet.modules import FCBlock, TensorizedFCBlock, ONN_FCBlock, TensorizedONN_FCBlock
-# from core.TFONet.modules import MRR_FCBlock
-from core.fsr_mrr.fsr_mrr_module import MRR_FCBlock
 from core.optimizer import FLOPSOptimizer, MixedTrainOptimizer, ScheduledOptim, ZO_SGD_mask, ZO_SCD_mask
 
 from core.GraSP.model_base import ModelBase

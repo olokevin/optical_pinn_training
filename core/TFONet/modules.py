@@ -12,7 +12,6 @@ from .nl_init import nl_init_dict
 from core.models.sparse_bp_base import SparseBP_Base
 from core.models.sparse_bp_mlp import LinearBlock
 from core.models.layers.custom_linear import MZIBlockLinear
-from core.fsr_mrr.fsr_mrr_linear import FSR_MRRLinear
 
 # ============= self-defined factorization search for tt =============
 def factorize(value, min_value=2, remaining=-1):
